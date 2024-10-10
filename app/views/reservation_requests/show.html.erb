@@ -1,0 +1,16 @@
+<h1>予約リクエストが完了しました！</h1>
+
+<p>以下の内容で予約キャンセル待ちの登録を受け付けました:</p>
+
+<ul>
+  <li><strong>レストラン名:</strong> <%= @reservation.restaurant.name %></li>
+  <li><strong>予約希望日:</strong> <%= @reservation.date %></li>
+  <li><strong>人数:</strong> <%= @reservation.party_size %>名</li>
+  <li><strong>実行間隔:</strong> <%= @reservation.check_interval %> 分ごとに通知します。</li>
+  <li><strong>メールアドレス:</strong> <%= @reservation.user.email %></li>
+</ul>
+
+<p>キャンセルが発生した場合、登録されたメールアドレスに通知を送信します。</p>
+
+
+<%= link_to 'トップページに戻る', root_path %>

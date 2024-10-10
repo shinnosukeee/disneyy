@@ -1,0 +1,11 @@
+<h1>予約完了</h1>
+<p>メールアドレス: <%= @user.email %></p>
+<p>予約を受け取りました。</p>
+<p>予約の詳細:</p>
+<ul>
+  <li>レストラン名: <%= @reservation.restaurant.name %></li>
+  <li>予約日: <%= @reservation.date %></li>
+  <li>人数: <%= @reservation.party_size %>名</li>
+  <li>通知間隔: <%= @reservation.check_interval %> 分</li>
+</ul>
+<p>ご利用ありがとうございます！</p>

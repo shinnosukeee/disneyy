@@ -1,0 +1,9 @@
+<h1>キャンセル通知</h1>
+<p><%= @user.email %> 様</p>
+<p>空きが見つかりました！予約の詳細:</p>
+<ul>
+  <li>レストラン: <%= @reservation.restaurant.name %></li>
+  <li>日付: <%= @reservation.date %></li>
+  <li>人数: <%= @reservation.party_size %>名</li>
+</ul>
+<p>予約をお早めにお取りください。</p>

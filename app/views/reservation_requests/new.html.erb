@@ -1,0 +1,43 @@
+<h1>ディズニーランド レストラン予約キャンセル待ち 登録</h1>
+
+<%= form_with model: @reservation, local: true do |form| %>
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> 禁止事項があります:</h2>
+      <ul>
+        <% @reservation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email, "メールアドレス" %><br>
+    <%= form.text_field :user_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :restaurant_id, "レストランの選択" %><br>
+    <%= form.collection_select :restaurant_id, Restaurant.all, :id, :name, prompt: "レストランを選択してください" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date, "予約希望日" %><br>
+    <%= form.date_field :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :party_size, "人数" %><br>
+    <%= form.number_field :party_size, min: 1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :check_interval, "通知間隔（分）" %><br>
+    <%= form.number_field :check_interval, min: 1, value: 5 %> <!-- デフォルトは5分 -->
+  </div>
+
+  <div class="actions">
+    <%= form.submit "登録する" %>
+  </div>
+<% end %>
