@@ -86,8 +86,12 @@
 <img width="831" height="465" alt="image" src="https://github.com/user-attachments/assets/b7433a77-56fe-405a-b535-88a8a602a02a" />
 ↑sidekiq 画面。チェック機能が完了せず、再実行に２つタスクがたまっている。 
 
+
+
 <img width="308" height="642" alt="image" src="https://github.com/user-attachments/assets/286e3939-6e91-4606-826a-855d5e74b102" />
 ↑予約確認メール受け取り
+
+
 
 <img width="482" height="508" alt="image" src="https://github.com/user-attachments/assets/89849ddd-6e0f-49ba-b29d-61aa255277e9" />
 ↑他サイトへのseleniumでのアクセス成功画面
